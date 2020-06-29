@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth import login, logout, authenticate
-
+form django.contrib.auth import authenticate
 
 def home(request):
     return render(request, 'todo/home.html')
@@ -37,6 +37,8 @@ def loginuser(request):
         else:
             login(request,user)
             return redirect('currenttodos')
+
+
 
 
 def logoutuser(request):
